@@ -36,7 +36,7 @@ if(isset($_POST['Submit'])){
         $_SESSION['aid']   = $data['a_id'];
         $_SESSION['aname'] = $data['a_name'];
 
-        header("Location: secure/index2.php");
+        header("Location:index2.php");
         exit;
     }else{
         echo "<script>alert('Username หรือ Password ไม่ถูกต้อง');</script>";
