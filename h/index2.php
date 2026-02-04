@@ -1,10 +1,5 @@
 <?php
-    session_start();
-if (empty($_SESSION|['aid'])) {
-echo "Access Denied";
-echo "<meta http-equiv='refresh' content='3; url=index.php'";
-exit;
-}
+    include_once("check_login.php");
 ?>
 <!doctype html>
 <html>
@@ -14,14 +9,16 @@ exit;
 </head>
 
 <body>
-<h1> หน้าแอดมินหลัก เจษฎาวุฒิ มั่นยืน(ฟลุ๊ค)</h1>
 
-<?php echo $_SESSION['a_name'];?><br>
+<h1>เข้าสู่ระบบหลังบ้าน -เจษฎาวุฒิ</h1>
+
+<?php echo "แอดมิน: ". $_SESSION['a_name']; ?> <br>
+
 <ul>
-<a href = "product.php"><li>จัดการสินค้า </li></a>
-<a href = "order.php"><li>จัดการออเดอร์</li></a>
-<a href = "customers.php"><li>จัดการลูกค้า</li></a>
-<a href = "product.php"><li>ออกจากระบบ</li></a>
-
+    <a href="products.php"><li>จัดการสินค้า</li></a>
+    <a href="orders.php"><li>จัดการออเดอร์</li></a>
+    <a href="customers.php"><li>จัดการลูกค้า</li></a>
+    <a href="logout.php"><li>ออกจากระบบ</li></a>
+</ul>
 </body>
 </html>
