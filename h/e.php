@@ -9,12 +9,11 @@
 </head>
 
 <body>
-<h1>c.php</h1>
-
+<h1>e.php</h1>
 
 <?php
-	unset($SESSION['name']);
-
-?>
+	unset($_SESSION['name']);
+     unset($_SESSION['p1']);
+ ?>
 </body>
 </html>

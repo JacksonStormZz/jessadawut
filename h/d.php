@@ -9,14 +9,14 @@
 </head>
 
 <body>
-<h1>d.php</h1>
+<h1>b.php</h1>
 
 
 <?php
-	$SESSION['name']="เจษฎาวุฒิ มั่นยืน";
-	$SESSION['nickname']="เจษฎาวุฒิ มั่นยืน";
-	$SESSION['p1']="เจษฎาวุฒิ มั่นยืน";
-	$SESSION['p2']="เจษฎาวุฒิ มั่นยืน";
+	echo $SESSION['name']."<br>";
+	echo $SESSION['nickname']."<br>";
+	echo $SESSION['p1']."<br>";
+	echo $SESSION['p2']."<br>";
 ?>
 </body>
 </html>
