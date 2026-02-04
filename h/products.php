@@ -1,49 +1,16 @@
 <?php
-
+session_start();
 include_once("check_login.php");
-
+include("header.php");
 ?>
 
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h4 class="text-success mb-3">ข้อมูลสินค้า</h4>
 
+    <!-- ตารางสินค้าเดิมของคุณ -->
+    
+  </div>
+</div>
 
-<!doctype html>
-
-<html>
-
-<head>
-
-<meta charset="utf-8">
-
-<title>จัดการสินค้า admin - เจษฎาวุฒิ</title>
-
-</head>
-
-
-
-<body>
-
-<h1>จัดการสินค้า admin - เจษฎาวุฒิ</h1>
-
-
-
-<?php echo"แอดมิน : ".$_SESSION['aname']; ?> <br>
-
- <ul>
-
-    <a href="products.php"><li>จัดการสินค้า</li> </a>
-
-    <a href="orders.php"><li>จัดการออเดอร์</li> </a>
-
-    <a href="customers.php"><li>จัดการลูกค้า</li> </a>
-
-    <a href="logout.php"><li>ออกจากระบบ</li> </a>
-
-
-
- </ul>
-
-
-
-</body>
-
-</html>
+<?php include("footer.php"); ?>

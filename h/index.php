@@ -1,39 +1,37 @@
+<?php session_start(); ?>
 <!doctype html>
-<html>
+<html lang="th">
 <head>
-<meta charset="utf-8">
-<title>เจษฎาวุฒิ มั่นยืน </title>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+<body class="bg-success bg-opacity-10">
 
-<body>
-<h1>เข้าสู่ระบบหลังบ้าน - เจษฎาวุฒิ</h1>
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+  <div class="col-md-4">
+    <div class="card shadow">
+      <div class="card-header bg-success text-white text-center">
+        <h4 class="mb-0">เข้าสู่ระบบผู้ดูแล</h4>
+      </div>
+      <div class="card-body">
+        <form method="post" action="checklogin.php">
+          <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input type="text" name="auser" class="form-control" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" name="apwd" class="form-control" required>
+          </div>
+          <button type="submit" name="Submit" class="btn btn-success w-100">
+            LOGIN
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 
-<form method ="post" action="">
-Username <input type="text" name="auser" autofocus required><br>
-Password <input type="password" name="apwd" required><br>
-<button type="submit" name="Submit">LOGIN</button>
-</form>
-
-<?php
-if(isset($_POST['Submit'])) {
-    include_once("connectdb.php");
-    $sql = "SELECT * FROM admin WHERE a_username ='{$_POST['auser']}' AND  a_password ='{$_POST['apwd']}' LIMIT 1" ;
-    $rs = mysqli_query($conn,$sql);
-    $num = mysqli_num_rows($rs);
-    
-    if ($num == 1) {
-        $data = mysqli_fetch_array($rs);
-        $_SESSION['aid'] = $data['a_id'];
-        $SESSION['aname']= $data['a_name'];
-        echo "<script>";
-        echo "window.location='index2.php';";
-        echo "</script>";
-    } else {
-        echo "<script>";
-        echo "alert('Username หรือ Password ไม่ถูกต้อง');";
-        echo "</script>";
-    }
-}
-?>
 </body>
 </html>

@@ -1,24 +1,45 @@
 <?php
-    include_once("check_login.php");
+session_start();
+include_once("check_login.php");
+include("header.php");
 ?>
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>เจษฎาวุฒิ</title>
-</head>
 
-<body>
+<div class="card shadow-sm">
+  <div class="card-body">
+    <h3 class="text-success">แดชบอร์ด</h3>
+    <p class="text-muted">
+      ผู้ใช้งาน: <?php echo $_SESSION['aname'] ?? $_SESSION['a_name']; ?>
+    </p>
 
-<h1>เข้าสู่ระบบหลังบ้าน -เจษฎาวุฒิ </h1>
+    <div class="row g-3 mt-3">
+      <div class="col-md-4">
+        <a href="products.php" class="card border-success text-decoration-none">
+          <div class="card-body text-success">
+            <h5>📦 สินค้า</h5>
+            <p class="mb-0">จัดการสินค้า</p>
+          </div>
+        </a>
+      </div>
 
-<?php echo "แอดมิน: ". $_SESSION['a_name']; ?> <br>
+      <div class="col-md-4">
+        <a href="orders.php" class="card border-success text-decoration-none">
+          <div class="card-body text-success">
+            <h5>🧾 ออเดอร์</h5>
+            <p class="mb-0">จัดการออเดอร์</p>
+          </div>
+        </a>
+      </div>
 
-<ul>
-    <a href="products.php"><li>จัดการสินค้า</li></a>
-    <a href="orders.php"><li>จัดการออเดอร์</li></a>
-    <a href="customers.php"><li>จัดการลูกค้า</li></a>
-    <a href="logout.php"><li>ออกจากระบบ</li></a>
-</ul>
-</body>
-</html>
+      <div class="col-md-4">
+        <a href="customers.php" class="card border-success text-decoration-none">
+          <div class="card-body text-success">
+            <h5>👥 ลูกค้า</h5>
+            <p class="mb-0">จัดการลูกค้า</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<?php include("footer.php"); ?>
