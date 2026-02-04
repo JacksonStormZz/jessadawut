@@ -6,12 +6,37 @@
 </head>
 
 <body>
-<h1>หน้าเข้าสู่ระบบ -เจษฎาวุฒิ </h1>
+<h1>หน้าเข้าสู่ระบบหลังบ้าน -เจษฎาวุฒิ </h1>
 
 <from method="post"action="">
 Username <input type="text"name="auser"autofocus required><br>
 password <input type="password" name="apwd" required><br>
 <button type="submit"name="Submit">Login</button>
+
+<?php
+if(isset($_POST['Submit'])){
+	include_once("connectdb.php");
+	$sql = "SELECT * FROM admin WHERE a_username='{$_POST['auser']}'and a_password='{$_POST['apwd']}'Limit1";
+	$rs = mysqli_query($conn,$sql);
+	$num = mysqli_num_rows($rs);
+
+	is ($num=1){
+		$data = mysqli_fetch_array($rs);
+		$_SESSION['aid']=$data['a_id'];
+		$_SESSION['aname']=$data['a_name'];
+		
+	} else{
+		echo"<script>"
+		echo"alert('Username หรือ password ไม่ถูกต้อง');";
+		echo"</script>";
+		}
+	
+
+	echo $num;
+
+}
+
+?>
 </from>
 </body>
 </html>
