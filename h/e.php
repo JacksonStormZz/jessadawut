@@ -5,15 +5,17 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>เจษฎาวุฒิ มั่นยืน(ฟลุ๊ค)</title>
+<title>เจษฎาวุฒิ มั่นยืน (ฟลุ๊ค)</title>
 </head>
 
 <body>
-<h1>e.php</h1>
+<h1>เจษฎาวุฒิ มั่นยืน (ฟลุ๊ค)</h1>
 
 <?php
-	unset($_SESSION['name']);
-     unset($_SESSION['p1']);
- ?>
+	echo @$_SESSION['name']."<br>";
+	echo @$_SESSION['nickname']."<br>";
+	echo @$_SESSION['p1'] ."<br>";
+	echo @$_SESSION['p2'] ."<br>"; 
+?>
 </body>
 </html>

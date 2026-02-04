@@ -5,18 +5,17 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>เจษฎาวุฒิ มั่นยืน(ฟลุ๊ค)</title>
+<title>เจษฎาวุฒิ มั่นยืน (ฟลุ๊ค)</title>
 </head>
 
 <body>
-<h1>b.php</h1>
-
+<h1>เจษฎาวุฒิ มั่นยืน (ฟลุ๊ค)</h1>
 
 <?php
-	echo $SESSION['name']."<br>";
-	echo $SESSION['nickname']."<br>";
-	echo $SESSION['p1']."<br>";
-	echo $SESSION['p2']."<br>";
+	echo @$_SESSION['name']."<br>";
+	echo @$_SESSION['nickname']."<br>";
+	echo @$_SESSION['p1'] ."<br>";
+	echo @$_SESSION['p2'] ."<br>"; 
 ?>
 </body>
 </html>
