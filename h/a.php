@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!doctype html>
 <html>
 <head>
@@ -6,12 +9,14 @@
 </head>
 
 <body>
-<h1>หน้าเข้าสู่ระบบ -เจษฎาวุฒิ </h1>
+<h1>a.php </h1>
 
-<from method="post"action="">
-Username <input type="text"name="auser"autofocus required><br>
-password <input type="password" name="apwd" required><br>
-<button type="submit"name="Submit">Login</button>
-</from>
+
+<?php
+	$SESSION['name']="เจษฎาวุฒิ มั่นยืน";
+	$SESSION['nickname']="ฟลุ๊ค";
+	$SESSION['p1']="รถไถ";
+	$SESSION['p2']="รถเกี่ยวนวดข้าว";
+?>
 </body>
 </html>
