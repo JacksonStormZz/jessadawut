@@ -50,7 +50,7 @@ if(isset($_POST['Submit'])) {
         $data = mysqli_fetch_array($rs);
         $_SESSION['aid'] = $data['a_id'];
         $_SESSION['aname'] = $data['a_name'];
-        echo "<script>window.location='index2.php';</script>";
+        echo "<script>window.location='secure/index2.php';</script>";
     } else {
         echo "<script>alert('Username หรือ Password ไม่ถูกต้อง');</script>";
     }
