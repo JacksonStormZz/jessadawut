@@ -37,7 +37,7 @@ $rs = mysqli_query($conn, $sql);
     <tr>
     	<td><?php echo $data['r_id'] ; ?></td>
         <td><?php echo $data['r_name'] ;?></td>
-        <td width="80" align="center"><a href="delete_region.php?id=<?php echo $data['r_id'];?>" onClick="return confirm('ยืนยันการลบ?');"><img src="img/ถัง.jpg" width="20"></td>
+        <td width="80" align="center"><a href="delete_region.php?id=<?php echo $data['r_id'];?>" onClick="return confirm('ยืนยันการลบ?');"><images src="img/ถัง.jpg" width="20"></td>
     </tr>
 <?php } ?>
 </table>
