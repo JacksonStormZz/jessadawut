@@ -62,7 +62,7 @@ $rs = mysqli_query($conn, $sql);
     	<td><?php echo $data['p_id'] ; ?></td>
         <td><?php echo $data['p_name'] ;?></td>
         <td><?php echo $data['r_name'] ;?></td>
-        <td><img src="images/<?php echo $data['p_id'] ; ?>.<?php echo $data['p_ext'] ; ?>" width="140"></td>
+        <td><img src="a<?php echo $data['p_id'] ; ?>.<?php echo $data['p_ext'] ; ?>" width="140"></td>
         <td width="80" align="center"><a href="delete_provinces.php?id=<?php echo $data['p_id']; ?>&ext=<?php echo $data['p_ext'] ;?>" onClick="return confirm('ยืนยันการลบ');"><img src="images/ถัง.jpg" width="20"></a></td>
     </tr>
 <?php } ?>
