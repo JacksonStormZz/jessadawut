@@ -59,11 +59,8 @@
             <td><?php echo $data['p_id']; ?></td>
             <td><?php echo $data['p_name']; ?></td>
             <td><img src="img/<?php echo $data['p_id']; ?>.<?php echo $data['p_ext']; ?>" width="140"></td>
-            <td align="center">
-                <a href="delete_provinces.php?id=<?php echo $data['p_id']; ?>" onClick="return confirm('ยืนยันการลบ?');">
-                    ลบ
-                </a>
-            </td>
+            <td width="80" align="center"><a href="delete_provinces.php?id=<?php echo $data['r_id']; ?>" onClick="return confirm('d1');"><img src="images/ถัง.jpg" width="80"></a></td>
+            
         </tr>
     <?php } ?>
     </table>
