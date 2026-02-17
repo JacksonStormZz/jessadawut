@@ -1,0 +1,15 @@
+
+<?php
+include_once("connectdb.php");
+
+
+$id = $_GET['id'];
+$sql = "SELECT * FROM regions WHERE r_id='xxx'";
+mysqli_query($conn,$sql) or die ("ลบข้อมูลไม่ได้");
+
+echo "<script>";
+echo "window.location='a.php';";
+echo "</script>";
+
+
+?> 
