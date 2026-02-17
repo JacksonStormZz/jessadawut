@@ -4,7 +4,7 @@ include_once("connectdb.php");
 
 
 $id = $_GET['id'];
-$sql = "SELECT * FROM regions WHERE r_id='xxx'";
+$sql = "SELECT * FROM regions WHERE regions r_id='xxx'";
 mysqli_query($conn,$sql) or die ("ลบข้อมูลไม่ได้");
 
 echo "<script>";
