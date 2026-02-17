@@ -26,6 +26,7 @@ if(isset($_POST['Submit'])){
 	<tr>
     	<th>รหัสจังหวัด</th>
         <th>ชื่อจังหวัด</th>
+        <th>รูป</th>
         <th>ลบ</th>
     </tr>
 <?php
@@ -37,6 +38,7 @@ $rs = mysqli_query($conn, $sql);
     <tr>
     	<td><?php echo $data['p_id'] ; ?></td>
         <td><?php echo $data['p_name'] ;?></td>
+        <td><img src="img/<?php echo $data['p_id'] ; ?>.jpg" width="20"></td>
         <td width="80" align="center"><a href="delete_region.php?id=<?php echo $data['p_id'];?>" onClick="return confirm('ยืนยันการลบ?');"><img src="img/ถัง.jpg" width="20"></td>
     </tr>
 <?php } ?>
