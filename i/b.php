@@ -9,7 +9,7 @@
 <h1>งาน i -- เจษฎาวุฒิ มั่นยืน(ฟลุ๊ค)</h1>
 <form method="post" action="" enctype="multipart/from-data">
 	ชื่อจังหวัด <input type="text" name="pname" autofocus required><br>
-    รูป <input type="file" name="pimage" required><br>
+    รูป <input type="file" name="pimages" required><br>
 
     ภาค 
     <select name="rid">
