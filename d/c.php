@@ -6,7 +6,7 @@
 <title>66010914005 เจษฏาวุฒิ มั่นยืน(ฟลุ๊ค) Gemini- ฟอร์ม Bootstrap</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <style>
-    /* สไตล์เพิ่มเติมสำหรับสีที่เลือก */
+    
     .color-display {
         display: inline-block;
         width: 40px;
@@ -92,7 +92,7 @@
             <hr class="my-5">
 
             <?php
-            // ส่วนแสดงผลลัพธ์
+            
             if(isset($_POST['Submit'])){
                 $fullname = $_POST['fullname'];
                 $phone = $_POST['phone'];

@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>66010914005 เจษฏาวุฒิ มั่นยืน(ฟลุ๊ค)</title>
+<style>
+    
+    .btn-green {
+        background-color: green;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 5px;
+    }
+    
+    .btn-yellow {
+        background-color: yellow;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 5px;
+    }
+
+    
+    #showImage {
+        margin-top: 20px;
+        max-width: 300px;
+        display: none; 
+        border: 2px solid #ccc;
+    }
+</style>
+</head>
+
+<body>
+    <h1>ฟอร์มรับข้อมูล - เจษฏาวุฒิ มั่นยืน(ฟลุ๊ค)</h1>
+
+    <button type="button" class="btn-green" onclick="showMyImage('picture1.jpg')">
+        ปุ่มสีเขียว (รูปที่ 1)
+    </button>
+
+    <button type="button" class="btn-yellow" onclick="showMyImage('picture2.jpg')">
+        ปุ่มสีเหลือง (รูปที่ 2)
+    </button>
+
+    <br>
+    
+    <img id="displayImg" src="" alt="Image Display" style="display:none; max-width: 500px; margin-top: 20px;">
+
+
+    <script>
+        function showMyImage(imageName) {
+            var img = document.getElementById('displayImg');
+            img.src = imageName;       
+            img.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
