@@ -15,17 +15,17 @@ if(isset($_POST['Submit'])){
 }
 ?>
 
-<?php include_once("connectdb.php"); ?>
 <!doctype html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>เจษฎาวุฒิ มั่นยืน (ฟลุ๊ค)</title>
+<meta charset="utf-8">
+<title>เจษฎาวุฒิ มั่นยืน (ฟลุ๊ค)</title>
 </head>
 <body>
-    <h1>งาน i -- เจษฎาวุฒิ มั่นยืน (ฟลุ๊ค)</h1>
-    
-    <form method="post" action="" enctype="multipart/form-data" >
+
+<h1> งานi-- เจษฎาวุฒิ มั่นยืน (ฟลุ๊ค) </h1>
+
+<form method="post" action="" enctype="multipart/form-data" >
     ชื่อจังหวัด <input type="text" name="pname" autofocus required><br>
     รูปภาพ <input type="file" name="pimage" required> <br>
     
