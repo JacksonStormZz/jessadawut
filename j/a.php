@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>เจษฎาวุฒิ มั่นยืน (ฟลุ๊ค)</title>
+<title>เจษฎาวุฒิ มั่นยืน(ฟลุ๊ค)</title>
 </head>
 
 <body>
